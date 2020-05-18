@@ -19,7 +19,8 @@ pipeline {
             steps {
                 withAWS(region:'eu-west-1',credentials:'aws-credentials') {
                 s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'pepe.html', bucket:'jrlambea.me')
-            }
+            	}
+	    }
         }
     }
 }
